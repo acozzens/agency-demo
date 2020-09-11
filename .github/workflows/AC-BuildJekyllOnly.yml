@@ -21,7 +21,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-gems-
 
-    - name: Build the site in the jekyll/builder container
+    - name: AC-TestBuildJekyll
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \

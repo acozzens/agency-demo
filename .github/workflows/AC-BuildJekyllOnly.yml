@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  AC-TestBuildJekyll:
 
     runs-on: ubuntu-latest
 
@@ -21,7 +21,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-gems-
 
-    - name: AC-TestBuildJekyll
+    - name: AC-Docker
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
